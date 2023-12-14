@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout</title>
   <style>
-    *{margin: 0;padding: 0;font-family: 'Pretendard-Regular'}
+    *{margin: 0;padding: 0;font-family: 'Pretendard-Regular';}
     li{list-style: none;}
     a{text-decoration: none;color: blue;}
 
@@ -43,20 +43,26 @@
       margin:0px 30px 30px 30px;overflow: hidden;
     }
     #top_gnb label{
-      float: left;width: 25%;height: 35px;line-height: 35px;
+      float: left;width: 25%;height: 35px;line-height: 35px;position: relative;
       text-align: center;font-size: 20px;border-bottom: 1px solid black;
     }
-    
+    #top_gnb label:hover::after{
+      content: '';position: absolute;left: 25%;z-index: -5;
+      bottom: 5px;width: 50%;height: 16px;background-color: rgba(255, 247, 0, 0.5);
+    }
     #top_gnb label:hover{cursor: pointer;}
 
     #section1, #section2, #section3, #section4 {display: none;}
     #tog1:checked ~ article #section1 {display: block;}
+    #tog1:checked ~ div #tog1Lb{font-weight: bold;}
     #tog2:checked ~ article #section2 {display: block;}
+    #tog2:checked ~ div #tog2Lb{font-weight: bold;}
     #tog3:checked ~ article #section3 {display: block;}
+    #tog3:checked ~ div #tog3Lb{font-weight: bold;}
     #tog4:checked ~ article #section4 {display: block;}
+    #tog4:checked ~ div #tog4Lb{font-weight: bold;}
     
     article {padding: 50px 50px 50px 50px;}
-
     #sq1{
       border: 1px solid black; border-radius: 20px;height: 80px;
       padding: 20px;
@@ -100,10 +106,10 @@
       <input class="toggle" id="tog2" name="art" type="radio">
       <input class="toggle" id="tog3" name="art" type="radio">
       <input class="toggle" id="tog4" name="art" type="radio">
-      <div><label for="tog1">버튼</label></div>
-      <div><label for="tog2">버튼</label></div>
-      <div><label for="tog3">버튼</label></div>
-      <div><label for="tog4">버튼</label></div>
+      <div><label id="tog1Lb" for="tog1">소개</label></div>
+      <div><label id="tog2Lb" for="tog2">노래</label></div>
+      <div><label id="tog3Lb" for="tog3">상품</label></div>
+      <div><label id="tog4Lb" for="tog4">버튼</label></div>
       <article>
         <section id="section1">
           <h3>제목 텍스트1</h3>
