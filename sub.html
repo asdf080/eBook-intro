@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sub</title>
+  <style>
+    *{margin: 0;padding: 0;font-family: 'Pretendard-Regular';}
+    li{list-style: none;}
+    a{text-decoration: none;color: blue;}
+
+    #wrap #main_header{
+      text-align: center;position: relative;height: 120px;
+      padding:15px 20px 30px 20px;margin-top: 15px;
+    }
+    #main_header h1 {line-height: 35px;}
+    #main_header p {text-align: left;margin-left: 15px;}
+    #headTxt1{
+      font-weight: bold;font-size: 20px;line-height: 40px;
+      margin-top:20px;
+    }
+
+    #main_header a, #main_header label{display: block;height: 32px;position: absolute;top: 10px;}
+    .left{margin-left: 15px;}
+    .right{margin-right: 20px;}
+
+    #main_header a{
+      width: 62px;left: 5px;
+      border: 1px solid black;}
+    #main_header label{
+      width: 32px;right: 5px;border: 1px solid black;
+    }
+    
+    .toggle{display: none;}
+    #toggle_gnb_wrap{display: none;}
+    #tog0:checked + #wrap > #toggle_gnb_wrap{display: block;}
+    
+    #toggle_gnb_wrap{background: #ddd;padding: 15px;}
+    #toggle_gnb_wrap ul {overflow: hidden;}
+    #toggle_gnb_wrap li {float: left;width: 50%;text-align: center;}
+
+    #top_gnb {
+      margin:0px 30px 30px 30px;overflow: hidden;
+    }
+    #top_gnb label{
+      float: left;width: 25%;height: 35px;line-height: 35px;position: relative;
+      text-align: center;font-size: 20px;border-bottom: 1px solid black;
+    }
+    #top_gnb label:hover::after{
+      content: '';position: absolute;left: 25%;z-index: -5;
+      bottom: 5px;width: 50%;height: 16px;background-color: rgba(255, 247, 0, 0.5);
+    }
+    #top_gnb label:hover{cursor: pointer;}
+
+    #section1, #section2, #section3, #section4 {display: none;}
+    #tog1:checked ~ article #section1 {display: block;}
+    #tog1:checked ~ div #tog1Lb{font-weight: bold;}
+    #tog2:checked ~ article #section2 {display: block;}
+    #tog2:checked ~ div #tog2Lb{font-weight: bold;}
+    #tog3:checked ~ article #section3 {display: block;}
+    #tog3:checked ~ div #tog3Lb{font-weight: bold;}
+    #tog4:checked ~ article #section4 {display: block;}
+    #tog4:checked ~ div #tog4Lb{font-weight: bold;}
+    
+    article {padding: 50px 50px 50px 50px;}
+    #sq1{
+      border: 1px solid black; border-radius: 20px;height: 80px;
+      padding: 20px;
+    }
+  
+    section h3 {text-align: center;line-height: 50px;}
+
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  </style>
+  <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- 토글 메뉴 체크박스 -->
+  <input class="toggle" id="tog0" type="checkbox">
+  <!-- 랩 -->
+  <div id="wrap">
+    <!-- 랩 > 토글메뉴 -->
+    <header id="main_header">
+      <a class="left" href="#"></a>
+      <h1>Mobile</h1>
+      <p id="headTxt1">Lorem ipsum dolor sit amet</p>
+      <p id="headTxt2">Lorem ipsum dolor sit amet</p>
+
+      <label class="right" for="tog0"><i class="fa-solid fa-bell"></i></label>
+    </header>
+    <!-- 랩 > 토글 메뉴 클릭시 풀다운 메뉴 -->
+    <div id="toggle_gnb_wrap">
+        <ul>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+        </ul>
+    </div>
+    <!-- 네비1 버튼 -->
+    <section id="top_gnb">
+      <input class="toggle" id="tog1" name="art" type="radio" checked="checked">
+      <input class="toggle" id="tog2" name="art" type="radio">
+      <input class="toggle" id="tog3" name="art" type="radio">
+      <input class="toggle" id="tog4" name="art" type="radio">
+      <div><label id="tog1Lb" for="tog1">소개</label></div>
+      <div><label id="tog2Lb" for="tog2">노래</label></div>
+      <div><label id="tog3Lb" for="tog3">상품</label></div>
+      <div><label id="tog4Lb" for="tog4">버튼</label></div>
+      <article>
+        <section id="section1">
+          <h3>제목 텍스트1</h3>
+          <div id="sq1">asdf1</div>
+        </section>
+        <section id="section2">
+          <h3>제목 텍스트2</h3>
+          <div id="sq2">asdf2</div>
+        </section>
+        <section id="section3">
+          <h3>제목 텍스트3</h3>
+          <div id="sq3">asdf3</div>
+        </section>
+        <section id="section4">
+          <h3>제목 텍스트4</h3>
+          <div id="sq4">asdf4</div>
+        </section>
+      </article>
+    </section>
+    
+    <footer id="main_footers">Footer</footer>
+  </div>
+</body>
+</html>
