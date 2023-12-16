@@ -1,0 +1,72 @@
+*{margin: 0;padding: 0;font-family: 'Pretendard-Regular';}
+a{text-decoration: none;}
+strong{color:black;font-weight: 700;}
+
+#main_header{
+  text-align: center;position: relative;height: 15px;
+  padding:20px 10px 20px 10px;margin-top: 15px;border: 1px solid black;
+}
+#main_header h2 {line-height: 33px;font-size: 30px;}
+
+#main_header a {position: absolute;top: 10px;height: 30px;}
+#main_header .left{height: 32px;left: 10px;border: 1px solid black;}
+#main_header .topMenu{
+  width: 32px;border: 1px solid black;
+  position: absolute;right: 10px;
+}
+
+article {margin-top: 80px;position: relative;}
+article h3 {font-size: 29px;margin-left: 13%;}
+article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-break: keep-all;color: #666;font-weight: 600;}
+
+#Art1{
+  display: flex;
+  flex-direction: column; /* 자식 요소 세로로 정렬 */
+  align-items: center; /* 가로축 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  margin-top: 20px;}
+#Art1 h1 {margin-top: 15px;font-size: 37px;}
+#Art1 h1 span {font-size: 45px;}
+#Art1 img {z-index: -10;width: 83%;margin-top: 20px;}
+
+#Art2{min-height: 730px;}
+#Art2 img {width: 100%;margin-top: 20px;}
+.FloatBtn1 {
+position: fixed;bottom: 10px;left: 50%;
+display: none;
+width: 200px;height: 47px;font-size: 15px;
+border: none;
+animation: slideUp 0.5s ease forwards;
+}
+.fixed {position: absolute;}
+
+#Art4 #feather {
+  position: absolute; width: 25%;left: 10%;
+  animation: fall 1.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  }
+  to {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  }
+}
+
+@keyframes fall {
+  0% {
+  transform: translate(-20px,-130px) rotate(20deg);
+}
+100% {
+  transform: translate(0, -55px) rotate(-5deg);
+}
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  }
+  
