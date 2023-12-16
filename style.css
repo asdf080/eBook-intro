@@ -2,35 +2,45 @@
 a{text-decoration: none;}
 strong{color:black;font-weight: 700;}
 
-#main_header{
+#main_nav{
   text-align: center;position: relative;height: 15px;
-  padding:20px 10px 20px 10px;margin-top: 15px;border: 1px solid black;
+  padding:20px 10px 20px 10px;border: 1px solid black;
 }
-#main_header h2 {line-height: 33px;font-size: 30px;}
+#main_nav h2 {line-height: 33px;font-size: 30px;}
 
-#main_header a {position: absolute;top: 10px;height: 30px;}
-#main_header .left{height: 32px;left: 10px;border: 1px solid black;}
-#main_header .topMenu{
+#main_nav a {position: absolute;top: 10px;height: 30px;}
+#main_nav .left{height: 32px;left: 10px;border: 1px solid black;}
+#main_nav .topMenu{
   width: 32px;border: 1px solid black;
   position: absolute;right: 10px;
 }
 
-article {margin-top: 80px;position: relative;}
-article h3 {font-size: 29px;margin-left: 13%;}
-article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-break: keep-all;color: #666;font-weight: 600;}
-
-#Art1{
+#head{
   display: flex;
   flex-direction: column; /* 자식 요소 세로로 정렬 */
   align-items: center; /* 가로축 중앙 정렬 */
-  text-align: center; /* 텍스트 중앙 정렬 */
-  margin-top: 20px;}
-#Art1 h1 {margin-top: 15px;font-size: 37px;}
-#Art1 h1 span {font-size: 45px;}
-#Art1 img {z-index: -10;width: 83%;margin-top: 20px;}
+  text-align: center; /* 텍스트 중앙 정렬 */}
+#head h1 {margin-top: 40px;font-size: 37px;}
+#head h1 span {font-size: 45px;}
+#head img {z-index: -10;width: 83%;margin-top: 20px;}
+#head p {font-size: 20px;margin-top: 20px;}
 
-#Art2{min-height: 730px;}
+article {margin-top: 90px;position: relative;}
+article h3 {font-size: 29px;margin-left: 13%;}
+article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-break: keep-all;color: #666;font-weight: 600;}
+
+.hidden {
+  opacity: 0.5;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+}
+.visible {
+  opacity: 1;transform: translateY(0);
+}
+
+#Art2{min-height: 750px;}
 #Art2 img {width: 100%;margin-top: 20px;}
+
 .FloatBtn1 {
 position: fixed;bottom: 10px;left: 50%;
 display: none;
