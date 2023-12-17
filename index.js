@@ -1,5 +1,6 @@
+
 window.addEventListener('scroll', () => {
-  var FloatBtn = document.querySelector('.FloatBtn');
+  let FloatBtn = document.querySelector('.FloatBtn');
 
   if (window.pageYOffset > 160) { 
     FloatBtn.style.display = 'block';
@@ -17,9 +18,14 @@ window.addEventListener('scroll', () => {
 document.addEventListener('scroll', function() {
   for(let p of document.querySelectorAll('article p')){
     if (p.getBoundingClientRect().top - window.innerHeight+100 <= 0) {
-      p.classList.add('visible');
+      p.classList.add('Scrovisible');
     } else {
-      p.classList.remove('visible');
+      p.classList.remove('Scrovisible');
     }
+  }
+
+  let fea = document.querySelector('#feather')
+  if (fea.getBoundingClientRect().top - window.innerHeight <= 0) {
+    fea.classList.add('fallAni');
   }
 });

@@ -26,15 +26,15 @@ strong{color:black;font-weight: 700;}
 #head p {font-size: 20px;margin-top: 20px;}
 
 article {margin-top: 90px;position: relative;}
-article h3 {font-size: 29px;margin-left: 13%;}
+article h3 {font-size: 29px;margin-left: 10%;}
 article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-break: keep-all;color: #666;font-weight: 600;}
 
-.hidden {
+.ScroHidden {
   opacity: 0.5;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
 }
-.visible {
+.Scrovisible {
   opacity: 1;transform: translateY(0);
 }
 
@@ -42,7 +42,7 @@ article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-bre
 #Art2 img {width: 100%;margin-top: 20px;}
 
 .FloatBtn1 {
-position: fixed;bottom: 10px;left: 50%;
+position: fixed;bottom: 0;left: 50%;
 display: none;
 width: 200px;height: 47px;font-size: 15px;
 border: none;
@@ -52,8 +52,8 @@ animation: slideUp 0.5s ease forwards;
 
 #Art4 #feather {
   position: absolute; width: 25%;left: 10%;
-  animation: fall 1.3s ease-out forwards;
 }
+#feather.fallAni{animation: fall 1.3s ease-out forwards;}
 
 @keyframes slideUp {
   from {
@@ -61,17 +61,19 @@ animation: slideUp 0.5s ease forwards;
   opacity: 0;
   }
   to {
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -20%);
   opacity: 1;
   }
 }
 
 @keyframes fall {
   0% {
-  transform: translate(-20px,-130px) rotate(20deg);
+  transform: translate(-20px,-100px) rotate(20deg);
+  opacity: 0.5;
 }
 100% {
   transform: translate(0, -55px) rotate(-5deg);
+  opacity: 1;
 }
 }
 
