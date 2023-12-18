@@ -1,19 +1,85 @@
 *{margin: 0;padding: 0;font-family: 'Pretendard-Regular';}
-a{text-decoration: none;}
+a{text-decoration: none;color: #8276f4;}
 strong{color:black;font-weight: 700;}
 li{list-style: none;}
 
+.purpleTxt{color: #8276f4;}
+
 #main_nav{
   text-align: center;position: relative;height: 15px;
-  padding:20px 10px 20px 10px;border: 1px solid black;
+  padding:20px 10px 20px 10px;
 }
 #main_nav h2 {line-height: 33px;font-size: 30px;}
 
 #main_nav a {position: absolute;top: 10px;height: 30px;}
-#main_nav .left{height: 32px;left: 10px;border: 1px solid black;}
+#main_nav .left{height: 32px;left: 10px;}
 #main_nav .topMenu{
-  width: 32px;border: 1px solid black;
-  position: absolute;right: 10px;
+  width: 32px;position: absolute;right: 20px;
+  top: 10px;
+}
+
+.hamburger .line{
+  width: 28px;
+  height: 4px;
+  background-color: #8276f4;
+  display: block;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{cursor: pointer;}
+
+#hamburger-9{
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active{
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-9:before{
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 43px;
+  height: 43px;
+  border: 4px solid transparent;
+  top: calc(90% - 35px);
+  left: calc(93% - 35px);
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active:before{border: 5px solid #8276f4;}
+
+#hamburger-9.is-active .line{width: 35px;}
+
+#hamburger-9.is-active .line:nth-child(2){opacity: 0;}
+
+#hamburger-9.is-active .line:nth-child(1){
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(5px);
+}
+
+#hamburger-9.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  -ms-transform: translateY(-13px) rotate(90deg);
+  -o-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
 }
 
 #head{
@@ -25,6 +91,13 @@ li{list-style: none;}
 #head h1 span {font-size: 45px;}
 #head img {z-index: -10;width: 83%;margin-top: 20px;}
 #head p {font-size: 20px;margin-top: 20px;}
+#head .fa-angles-down {animation: motion 0.7s ease-in-out 0s infinite alternate;color: #8276f4;
+position: relative;}
+
+@keyframes motion {
+	0% {top: 0px;}
+	100% {top: 10px;}
+}
 
 article {margin-top: 90px;position: relative;}
 article h3 {font-size: 29px;margin-left: 10%;}
@@ -44,9 +117,9 @@ article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-bre
 
 .FloatBtn1 {
 position: fixed;bottom: 0;left: 50%;
-display: none;
-width: 200px;height: 47px;font-size: 15px;
-border: none;
+display: none;width: 200px;height: 47px;
+font-size: 15px;font-weight: bold;color: #fff;
+border: none;background-color: #8276f4;
 animation: slideUp 0.5s ease forwards;
 }
 .fixed {position: absolute;}
@@ -57,7 +130,22 @@ animation: slideUp 0.5s ease forwards;
 #Art3 ul li {
   display: flex;flex-direction: column;
   width: 50%;font-size: 20px;padding-top: 10px;
+  margin-top: 25px;
   justify-content: center;align-items: center;
+}
+#Art3 ul i {font-size: 60px;margin-bottom: 20px;color: #af8eff;}
+
+@keyframes draw {
+  from {stroke-dashoffset: 2607;}
+  to {stroke-dashoffset: 0;}
+}
+
+#Art3 .fa-magnifying-glass path {
+  stroke: #af8eff;
+  stroke-width: 25;fill:none;
+  stroke-dasharray: 2607;
+  stroke-dashoffset: 2607;
+  animation: draw 3s linear infinite;
 }
 
 #Art4 #feather {

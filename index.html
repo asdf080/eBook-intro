@@ -6,21 +6,26 @@
   <title>main</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <nav id="main_nav">
     <a class="left" href="#"><h2>e-BOOK</h2></a>
-    <a class="topMenu" href="#"><i class="fa-solid fa-bars"></i></a>
+    <a class="topMenu" href="#"><div class="hamburger" id="hamburger-9">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div></a>
   </nav>
     <section>
       <header id="head">
         <h1>e-BOOK을 쓰는<br>이유는 단 하나,<br><span>모든 것.</span></h1>
         <img src="./images/main-book.png">
         <p>자세히 알아보기</p>
-        <p>화살표</p>
+        <p><i class="fa-solid fa-angles-down"></i></p>
       </header>
       <article id="Art2">
-        <h3 style="font-size: 35px;"><span style="color: #777;">LED는 갖고있지 않은</span><br>e-Ink만의 장점</h3>
+        <h3 style="font-size: 35px;"><span style="color: #777;">LED는 갖고있지 않은</span><br><span class="purpleTxt">e-Ink만의 장점</span></h3>
         <h3 style="margin-top: 20px;">낮은 피로도,</h3>
         <h3>낮은 전력 소모량</h3>
         <img src="./images/Art21.PNG">
@@ -32,10 +37,10 @@
         <h3>선택과 집중:</h3>
         <h3>합리적인 가격</h3>
         <ul>
-          <li><i class="fa-solid fa-house"></i><span>1번</span></li>
-          <li><i class="fa-solid fa-house"></i><span>2번</span></li>
-          <li><i class="fa-solid fa-house"></i><span>3번</span></li>
-          <li><i class="fa-solid fa-house"></i><span>4번</span></li>
+          <li><svg class="fa-magnifying-glass" xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 512 512"><path fill="#af8eff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>텍스트 찾기</span></li>
+          <li><i class="fa-brands fa-bluetooth"></i>블루투스 연결</span></li>
+          <li><i class="fa-regular fa-hand-point-up"></i><span>편리한 제스처</span></li>
+          <li><i class="fa-solid fa-sd-card"></i><span>넉넉한 용량 확장</span></li>
         </ul>
         <p class="ScroHidden">e-Book은 오로지 독서에 집중할 수 있도록 설계된 기기입니다. <br> 즉 <strong>필요한 기능만 갖춘 덕분에, 가격도 합리적입니다.</strong></p>
       </article>

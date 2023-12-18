@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+  });
+});
 
 window.addEventListener('scroll', () => {
   let FloatBtn = document.querySelector('.FloatBtn');
@@ -8,7 +13,7 @@ window.addEventListener('scroll', () => {
     FloatBtn.style.display = 'none';
   }
 
-  if (window.pageYOffset > 850) {
+  if (window.pageYOffset > 840) {
     FloatBtn.classList.add('fixed');
   } else {
     FloatBtn.classList.remove('fixed');
