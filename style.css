@@ -1,6 +1,7 @@
 *{margin: 0;padding: 0;font-family: 'Pretendard-Regular';}
 a{text-decoration: none;}
 strong{color:black;font-weight: 700;}
+li{list-style: none;}
 
 #main_nav{
   text-align: center;position: relative;height: 15px;
@@ -38,7 +39,7 @@ article p {font-size: 20px;line-height: 28px; margin: 20px 13% 50px 13%;word-bre
   opacity: 1;transform: translateY(0);
 }
 
-#Art2{min-height: 750px;}
+#Art2{min-height: 800px;}
 #Art2 img {width: 100%;margin-top: 20px;}
 
 .FloatBtn1 {
@@ -49,6 +50,15 @@ border: none;
 animation: slideUp 0.5s ease forwards;
 }
 .fixed {position: absolute;}
+
+#Art3 ul {
+  display: flex;flex-wrap: wrap;padding: 0;
+}
+#Art3 ul li {
+  display: flex;flex-direction: column;
+  width: 50%;font-size: 20px;padding-top: 10px;
+  justify-content: center;align-items: center;
+}
 
 #Art4 #feather {
   position: absolute; width: 25%;left: 10%;

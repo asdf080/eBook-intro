@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     FloatBtn.style.display = 'none';
   }
 
-  if (window.pageYOffset > 800) {
+  if (window.pageYOffset > 850) {
     FloatBtn.classList.add('fixed');
   } else {
     FloatBtn.classList.remove('fixed');
