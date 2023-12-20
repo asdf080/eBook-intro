@@ -112,10 +112,11 @@ article p {font-size: 24px;line-height: 35px; margin: 50px 13% 50px 13%;word-bre
 }
 #Art2 .pop_wrap:after{display:inline-block; height:100%; vertical-align:middle; content:'';}
 #Art2 .pop_wrap .pop_inner{
-  position: relative;
-  display:inline-block; padding:20px 30px; background:#f3f3f3; width: 50%;height: 80%;
+  position: relative;width: 50%;min-height: 80%;
+  display:inline-block; padding:20px 30px; background:#f3f3f3; 
   vertical-align:middle; font-size:15px;border-radius: 20px;
 }
+#Art2 .pop_wrap .pop_inner h3{text-align: left;}
 #Art2 .pop_wrap .pop_inner p {margin: 40px 20px;}
 #Art2 .pop_wrap .btn_close {
   position: absolute; border: 2px solid #8276f4; font-size: 30px;right: 30px;
@@ -130,10 +131,8 @@ article p {font-size: 24px;line-height: 35px; margin: 50px 13% 50px 13%;word-bre
 .no-scroll {overflow: hidden;height: 100%;}
 
 @keyframes popUpSlide {
-  from {transform: translateY(100%); /* 시작 위치: 아래쪽 */
-    opacity: 0;}
-  to {transform: translateY(0); /* 끝 위치: 원래 위치 */
-    opacity: 1;}
+  from {transform: translateY(50%);}
+  to {transform: translateY(0);}
 }
 
 @keyframes fadeOut {
