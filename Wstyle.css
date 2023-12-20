@@ -8,19 +8,72 @@ a{text-decoration: none;color: #8276f4;}
 strong{color:black;font-weight: 700;}
 li{list-style: none;}
 .purpleTxt{color: #8276f4;}
+body{transition: 0.2s;}
 
 #main_nav{
-  text-align: center;position: relative;height: 15px;
+  text-align: center;position: relative;height: 25px;
   padding:20px 10px 20px 10px;
 }
-#main_nav h2 {line-height: 33px;font-size: 30px;}
+#main_nav h2 {line-height: 40px;font-size: 35px;}
 
 #main_nav a {position: absolute;top: 10px;height: 30px;}
 #main_nav .left{height: 32px;left: 20px;}
-#main_nav .topMenu{
-  width: 32px;position: absolute;right: 20px;
+#main_nav .switch-container{
+  position: absolute;width: 32px;right: 70px;
   top: 10px;
 }
+
+.switch-container label {
+  display: flex;
+  width: 85px;height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background: #cacaca;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.switch-container i {font-size: 25px;}
+
+ label .sun{
+  color: rgb(255, 234, 114);
+  transition: 0.8s;
+  transform: translateX(39px) rotate(-90deg);
+  opacity: 0;
+}
+ label .moon {
+  color: #fff;
+  transition: 0.8s; opacity: 1;
+  transform: rotate(0);
+}
+.switch-container label .ball {
+  display: none;
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  left: 5px;
+  background: #000000;
+  border-radius: 50%;
+  transition: 0.8s;
+}
+
+.switch-container input{display: none;}
+
+input + label {background: #c0c0c0;}
+input:checked + label {background: #b9b1ff;}
+
+input:checked + label .sun {
+  transform: translateX(0px) rotate(0);opacity: 1;
+}
+input:checked + label .moon {
+  transform: translateX(-38px) rotate(90deg);opacity: 0;
+}
+input:checked + label .ball {transform: translateX(45px);background: #fff;}
 
 #head{
   position: relative;display: flex;

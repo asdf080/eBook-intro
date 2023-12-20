@@ -1,10 +1,51 @@
-// 탑 메뉴
-$(document).ready(function(){
-  $(".hamburger").click(function(){
-    $(this).toggleClass("is-active");
-  });
-});
+// 야간모드
+let clickNum = 0;
+    function nightDayHandler(){
+      clickNum++;
+      if(clickNum % 2 === 1){
+        document.querySelector('body').style.background = "black"
+        for(let p of document.querySelectorAll('a')){
+          p.style.color = "#white"
+        }
+        for(let p of document.querySelectorAll('p')){
+          p.style.color = "#cacaca"
+        }
+        for(let p of document.querySelectorAll('strong')){
+          p.style.color = "white"
+        }
+        for(let p of document.querySelectorAll('h3')){
+          p.style.color = "white"
+        }
+        for(let p of document.querySelectorAll('li')){
+          p.style.color = "white"
+        }
+        for(let p of document.querySelectorAll('span')){
+          p.style.color = "white"
+        }
+      } else if(clickNum % 2 === 0) {
+        document.querySelector('body').style.background = ""
+        for(let p of document.querySelectorAll('a')){
+          p.style.color = ""
+        }
+        for(let p of document.querySelectorAll('p')){
+          p.style.color = ""
+        }
+        for(let p of document.querySelectorAll('strong')){
+          p.style.color = ""
+        }
+        for(let p of document.querySelectorAll('h3')){
+          p.style.color = ""
+        }
+        for(let p of document.querySelectorAll('li')){
+          p.style.color = ""
+        }
+        for(let p of document.querySelectorAll('span')){
+          p.style.color = ""
+        }
+      }
+    }
 
+// 스크롤 p/깃털
 document.addEventListener('scroll', function() {
   for(let p of document.querySelectorAll('article p')){
     if (p.getBoundingClientRect().top - window.innerHeight+100 <= 0) {
