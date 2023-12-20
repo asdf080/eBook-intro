@@ -3,11 +3,11 @@ let clickNum = 0;
     function nightDayHandler(){
       clickNum++;
       if(clickNum % 2 === 1){
-        document.querySelector('body').style.background = "black"
+        document.querySelector('body').style.background = "#111"
         for(let p of document.querySelectorAll('a')){
           p.style.color = "#white"
         }
-        for(let p of document.querySelectorAll('p')){
+        for(let p of document.querySelectorAll('section p')){
           p.style.color = "#cacaca"
         }
         for(let p of document.querySelectorAll('strong')){
