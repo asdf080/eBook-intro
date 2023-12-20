@@ -24,19 +24,55 @@ document.addEventListener('scroll', function() {
 window.addEventListener('scroll', () => {
   let FloatBtn = document.querySelector('.FloatBtn');
 
-  if (window.pageYOffset > 250) { 
+  if (window.pageYOffset > 400) { 
     FloatBtn.style.display = 'block';
+    FloatBtn.style.animation = 'slideUp 0.5s ease forwards';
   } else {
-    FloatBtn.style.display = 'none';
+    FloatBtn.style.animation = 'slideDown 0.5s ease forwards';
+    FloatBtn.addEventListener('animationend', () => {
+      // 애니메이션이 끝나면 display를 none으로 설정
+      if (window.pageYOffset <= 400) {
+        FloatBtn.style.display = 'none';
+      }
+    });
   }
 
-  if (window.pageYOffset > 950) {
+  if (window.pageYOffset > 1280) {
     FloatBtn.classList.add('fixed');
   } else {
     FloatBtn.classList.remove('fixed');
   }
 });
 
+// 팝업 열기
+document.querySelector('.btn_open').addEventListener('click', function() {
+  var popWrap = document.querySelector(this.getAttribute('href'));
+  popWrap.style.display = 'block';
+  popWrap.style.animation = 'popUpSlide 0.5s ease-out forwards';
+  document.body.classList.add('no-scroll');
+});
+
+// 팝업 닫기
+function closePopup(popWrap) {
+  popWrap.style.animation = 'fadeOut 0.5s ease-out forwards';
+  popWrap.addEventListener('animationend', function() {
+    popWrap.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+  }, { once: true });
+}
+
+document.querySelector('.pop_wrap .btn_close').addEventListener('click', function() {
+  closePopup(this.closest('.pop_wrap'));
+});
+
+document.querySelector('.pop_wrap').addEventListener('click', function(event) {
+  if (!event.target.closest('.pop_inner')) {
+    closePopup(this);
+  }
+});
+
+
+// Art3
 // Intersection Observer를 설정합니다.
 let observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
