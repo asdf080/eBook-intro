@@ -4,6 +4,7 @@ let clickNum = 0;
       clickNum++;
       if(clickNum % 2 === 1){
         document.querySelector('body').style.background = "#111"
+        document.querySelector('#main_nav').style.background =  "rgba(11, 11, 11, 0.2)"
         for(let p of document.querySelectorAll('a')){
           p.style.color = "#white"
         }
@@ -24,6 +25,7 @@ let clickNum = 0;
         }
       } else if(clickNum % 2 === 0) {
         document.querySelector('body').style.background = ""
+        document.querySelector('#main_nav').style.background = ""
         for(let p of document.querySelectorAll('a')){
           p.style.color = ""
         }
@@ -62,10 +64,9 @@ document.addEventListener('scroll', function() {
 });
 
 // #Art2
-window.addEventListener('scroll', () => {
-  let FloatBtn = document.querySelector('.FloatBtn');
-
-  if (window.pageYOffset > 400) { 
+window.addEventListener('scroll', () => {  
+    let FloatBtn = document.querySelector('.FloatBtn');
+    if (window.pageYOffset > 400) { 
     FloatBtn.style.display = 'block';
     FloatBtn.style.animation = 'slideUp 0.5s ease forwards';
   } else {
@@ -177,4 +178,69 @@ let observer3 = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll('#Art6 img').forEach(svg => {
   observer3.observe(svg);
+});
+
+// top 버튼
+document.querySelector('.goTop').addEventListener('click', function() {
+  window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+  });
+});
+
+let goTopElement = document.querySelector('.goTop2');
+
+  goTopElement.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    this.classList.add('scrolling');
+  });
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset === 0 && goTopElement) {
+    goTopElement.classList.remove('scrolling');
+  }
+});
+
+
+// 캐러셀
+$(function(){
+  $('.carousel-item').eq(0).addClass('active');
+  var total = $('.carousel-item').length;
+  var current = 0;
+  $('#moveRight').on('click', function(){
+    var next=current;
+    current= current+1;
+    setSlide(next, current);
+  });
+  $('#moveLeft').on('click', function(){
+    var prev=current;
+    current = current- 1;
+    setSlide(prev, current);
+  });
+  function setSlide(prev, next){
+    var slide= current;
+    if(next>total-1){
+     slide=0;
+      current=0;
+    }
+    if(next<0){
+      slide=total - 1;
+      current=total - 1;
+    }
+           $('.carousel-item').eq(prev).removeClass('active');
+           $('.carousel-item').eq(slide).addClass('active');
+      setTimeout(function(){
+
+      },800);
+    
+
+    
+    console.log('current '+current);
+    console.log('prev '+prev);
+  }
 });

@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>main</title>
+  <title>SPACE</title>
+  <link rel="icon" href="./images/rocket-solid.png">
   <link rel="stylesheet" href="Wstyle.css">
   <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <nav id="main_nav">
-    <a class="left" href="#"><h2>e-BOOK</h2></a>
+    <a class="left goTop"><h2>e-BOOK</h2></a>
     <div class="switch-container">
       <input type="checkbox" id="switch" onclick="nightDayHandler()"/>
       <label for="switch">
@@ -22,15 +23,15 @@
   </nav>
     <section>
       <header id="head">
-        <h1>e-BOOK을 쓰는 이유는 단 하나,<br><span>모든 것.</span></h1>
+        <h1>내 손바닥 안의 우주<br><span>e-BOOK</span></h1>
         <span id="SCR">SCROLL</span>
         <video src="./images/My Movie1.mp4" muted autoplay loop></video>
       </header>
       <article id="Art2">
-        <h3 style="font-size: 65px;"><span style="color: #777;">LED는 갖고있지 않은</span><br><span class="purpleTxt">e-Ink만의 장점</span></h3>
+        <h3><span style="color: #777;">LED는 갖고있지 않은</span><br><span class="purpleTxt">e-Ink만의 장점</span></h3>
         <h3 style="margin-top: 20px;">낮은 피로도,</h3>
         <h3>낮은 전력 소모량</h3>
-        <img src="./images/Art21.PNG">
+        <span><img src="./images/Art21.PNG"></span>
         <span class="pWrap">
           <p class="ScroHidden">e-Ink 디스플레이는 화소가 직접 빛을 발생시키는 대신, 주변의 빛을 반사하여 화면을 표시합니다. 이는 주변 환경과의 밝기 차이를 최소화하여 <strong>눈의 피로를 줄이고 시력을 보호하는 데 도움을 줍니다.</strong></p>
           <p class="ScroHidden">추가적으로, e-Ink 디스플레이는 빛을 생성하기 위한 전력 소모가 없어 <strong>장시간의 기기 사용이 가능합니다.</strong> 완전 충전에는 대략 2~3시간이 소요되지만, 배터리 소진까지는 약 2~3주가 걸립니다.</p>
@@ -102,8 +103,87 @@
          </ul>
          <p>종이책 한 권의 가격이 부담스럽거나, 일회성으로만 읽을 책을 소장할 필요가 없을 때, 도서관과 같은 넓은 책장에서 자유롭게 책을 선택하고 싶을 때, 전자책 구독 서비스가 완벽한 해결책이 됩니다. <br><strong>한 권의 종이책 가격으로 수천 권의 전자책을 무제한으로 이용해보세요.</strong></p>
       </article>
+      <article id="Art7">
+        <h3>제품 소개</h3>
+        <div class="carousel">
+          <div class="carousel__nav">
+           <span id="moveLeft" class="carousel__arrow">
+                <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+        </svg>
+            </span>
+            <span id="moveRight" class="carousel__arrow" >
+              <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+          <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+        </svg>    
+            </span>
+          </div>
+          <div class="carousel-item carousel-item--1">
+            <div class="carousel-item__image"></div>
+            <div class="carousel-item__info">
+              <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">AMAZON</h2>
+              <h1 class="carousel-item__title">킨들 스크라이브</h1>
+              <p class="carousel-item__description">the first Kindle and digital notebook, all in one, with a 10.2” 300 ppi Paperwhite display</p>
+              <a href="#" class="carousel-item__btn">SHOP NOW</a>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item--2">
+            <div class="carousel-item__image"></div>
+            <div class="carousel-item__info">
+              <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">INNOSPACEONE</h2>
+              <h1 class="carousel-item__title">루나</h1>
+              <p class="carousel-item__description">Clear Glass Window With Brown and White Wooden Frame iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+              <a href="#" class="carousel-item__btn">Read the article</a>
+                </div>
+            </div>
+          </div>
+            <div class="carousel-item carousel-item--3">
+            <div class="carousel-item__image"></div>
+            <div class="carousel-item__info">
+              <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">ONYX</h2>
+              <h1 class="carousel-item__title">북스 팔마</h1>
+              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              <a href="#" class="carousel-item__btn">Explore the palms</a>
+                </div>
+            </div>
+          </div>
+          
+           <div class="carousel-item carousel-item--4">
+            <div class="carousel-item__image"></div>
+            <div class="carousel-item__info">
+              <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">RIDIBOOKS</h2>
+              <h1 class="carousel-item__title">리디 페이퍼</h1>
+              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              <a href="#" class="carousel-item__btn">Explore the beach</a>
+                </div>
+            </div>
+          </div>
+          
+         <div class="carousel-item carousel-item--5">
+            <div class="carousel-item__image"></div>
+            <div class="carousel-item__info">
+              <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">KYOBO</h2>
+              <h1 class="carousel-item__title">샘 10 PLUS</h1>
+              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              <a href="#" class="carousel-item__btn">Read the article</a>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </article>
     </section>
-  <footer id="main_footers"><p style="color: #000;">PC 버전 바로가기</p></footer>
+  <footer id="main_footers"><span><p>PROJECT SPACE <br></p><p>in your own hands</p><br><p>This homepage was created with HTML, JS, CSS <br> ...and a lot of love, care, and passion!</p><br><hr><br>
+    <a href="https://github.com/asdf080" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+    <a href="https://www.amazon.com/Amazon-Kindle-Ereader-Family/b?ie=UTF8&node=6669702011" target="_blank"><i class="fa-solid fa-basket-shopping fa-2xl"></i></a>
+    <a href="https://innospaceone.com/" target="_blank"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+    </span><span><img class="goTop2" src="./images/rocket.png"></span></footer>
   <script src="web.js"></script>
 </body>
 </html>
