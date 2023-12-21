@@ -517,7 +517,7 @@ article p {
 #main_footers .ready:hover{
   cursor: pointer;
   transform: scaleY(0.8);
-  transform-origin: center bottom;
+  transform-origin: bottom;
   transition: 0.5s;
 }
 
