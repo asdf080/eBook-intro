@@ -491,7 +491,7 @@ article p {
   justify-content: space-between;
   background-color: #8276f4;
   margin-top: 100px;
-  padding: 40px 8%;
+  padding: 10px 8%;
   color: #fff;
 }
 
@@ -503,25 +503,44 @@ article p {
 #main_footers p:first-child{
   font-size: 35px;
   font-weight: bold;
+  margin-top: 30px;
 }
 
-#main_footers span:last-child {
-  width: 200px;
-  height: 200px;
+#main_footers #circle {
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   background-color: #fff;
+  margin-top: 20px;
 }
-#main_footers img{width: 80%;}
+#main_footers img{width: 75%;margin: 10px 0 0 25px;}
+#main_footers .ready:hover{
+  cursor: pointer;
+  transform: scaleY(0.8);
+  transform-origin: center bottom;
+  transition: 0.5s;
+}
 
 #main_footers a {
   margin: 0 15px 0 5px;
   color: #fff;
 }
 
+#rocketWrap{
+  display: flex;flex-direction: column;
+  align-items: center;
+}
+
+
 .goTop:hover{cursor: pointer;}
 .scrolling {
   transform: translateY(-900vh);
   transition: 1s;
+}
+
+#click {
+  margin-top: 15px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1600px) {
@@ -652,7 +671,7 @@ article p {
   max-height: 550px;   
   overflow: hidden;
   position: relative;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .carousel-item {
@@ -712,7 +731,7 @@ transition: 0.6s all ease-in-out;
 
 .carousel-item__subtitle {
   letter-spacing: 3px;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   margin: 0;
   color: #7E7E7E;    
@@ -741,11 +760,10 @@ transition: 0.6s all ease-in-out;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
   margin-top: 35px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
+  font-size: 21px;
   color: #7e7e7e;
-  line-height: 22px;
-  margin-bottom: 35px;
+  line-height: 30px;
+  margin: 35px 5%;
 }
 
 .carousel-item--1 .carousel-item__image{
@@ -781,7 +799,7 @@ background-image: url('./images/onix.PNG');
   color: #2C2C2C;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 3px;
-  font-size: 11px;
+  font-size: 18px;
   text-transform: uppercase;
   margin: 0;
   width: 35%;

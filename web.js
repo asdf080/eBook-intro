@@ -4,45 +4,38 @@ let clickNum = 0;
       clickNum++;
       if(clickNum % 2 === 1){
         document.querySelector('body').style.background = "#111"
+        document.querySelector('.carousel__nav').style.background = "#111"
         document.querySelector('#main_nav').style.background =  "rgba(11, 11, 11, 0.2)"
-        for(let p of document.querySelectorAll('a')){
-          p.style.color = "#white"
+        for(let p of document.querySelectorAll('strong, h3, li, span, .carousel-item__title, .carousel-item__btn')){
+          p.style.color = "white"
         }
         for(let p of document.querySelectorAll('section p')){
           p.style.color = "#cacaca"
         }
-        for(let p of document.querySelectorAll('strong')){
-          p.style.color = "white"
+        for(let p of document.querySelectorAll('.carousel-item__subtitle')){
+          p.style.color = "#bbb"
         }
-        for(let p of document.querySelectorAll('h3')){
-          p.style.color = "white"
+        for(let p of document.querySelectorAll('.carousel-item')){
+          p.style.background = "#111"
         }
-        for(let p of document.querySelectorAll('li')){
-          p.style.color = "white"
+        for(let p of document.querySelectorAll('.carousel__icon')){
+          p.style.fill="#cacaca"
         }
-        for(let p of document.querySelectorAll('span')){
-          p.style.color = "white"
+        for(let p of document.querySelectorAll('.purpleTxt')){
+          p.style.color="#8276f4"
         }
       } else if(clickNum % 2 === 0) {
         document.querySelector('body').style.background = ""
         document.querySelector('#main_nav').style.background = ""
-        for(let p of document.querySelectorAll('a')){
+        document.querySelector('.carousel__nav').style.background = ""
+        for(let p of document.querySelectorAll('strong, h3, li, span, a, p, .carousel-item__title, .carousel-item__btn')){
           p.style.color = ""
         }
-        for(let p of document.querySelectorAll('p')){
-          p.style.color = ""
+        for(let p of document.querySelectorAll('.carousel-item')){
+          p.style.background = ""
         }
-        for(let p of document.querySelectorAll('strong')){
-          p.style.color = ""
-        }
-        for(let p of document.querySelectorAll('h3')){
-          p.style.color = ""
-        }
-        for(let p of document.querySelectorAll('li')){
-          p.style.color = ""
-        }
-        for(let p of document.querySelectorAll('span')){
-          p.style.color = ""
+        for(let p of document.querySelectorAll('.carousel__icon')){
+          p.style.fill=""
         }
       }
     }
@@ -189,6 +182,7 @@ document.querySelector('.goTop').addEventListener('click', function() {
   });
 });
 
+// top 버튼2
 let goTopElement = document.querySelector('.goTop2');
 
   goTopElement.addEventListener('click', function() {
@@ -197,12 +191,14 @@ let goTopElement = document.querySelector('.goTop2');
       left: 0,
       behavior: 'smooth'
     });
+    this.classList.remove('ready')
     this.classList.add('scrolling');
   });
 
 window.addEventListener('scroll', function() {
   if (window.pageYOffset === 0 && goTopElement) {
     goTopElement.classList.remove('scrolling');
+    goTopElement.classList.add('ready')
   }
 });
 
