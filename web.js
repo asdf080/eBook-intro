@@ -39,7 +39,7 @@ function nightDayHandler() {
     )) {
       p.style.color = "";
     }
-    for (let p of document.querySelectorAll(".carousel-item, .pop_inner")) {
+    for (let p of document.querySelectorAll(".carousel-item, pop_inner")) {
       p.style.background = "";
     }
     for (let p of document.querySelectorAll(".carousel__icon")) {

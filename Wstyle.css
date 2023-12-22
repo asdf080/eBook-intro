@@ -554,132 +554,6 @@ article p {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1600px) {
-  article {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  #head #SCR {
-    bottom: 40px;
-  }
-  #head #SCR::before {
-    display: none;
-  }
-  #Art4 #feather {
-    width: 16%;
-    top: -49px;
-  }
-  .FloatBtn1 {
-    position: relative;
-    display: block;
-    transform: translateX(-50%);
-  }
-  #Art2 .pWrap {
-    display: block;
-  }
-  #Art2 .pWrap p {
-    width: 70%;
-    margin: 30px 13% 50px 13%;
-  }
-  #Art2 .pop_wrap .pop_inner {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  #head h1 {
-    top: 55%;
-    font-size: 50px;
-    word-break: keep-all;
-  }
-  #head h1 span {
-    font-size: 65px;
-  }
-  #Art2 h3:first-child {
-    font-size: 50px;
-  }
-  #main_footers {
-    flex-direction: column;
-  }
-  #main_footers #circle {
-    margin-top: 80px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #head h1 {
-    font-size: 30px;
-    word-break: keep-all;
-  }
-  #head h1 span {
-    font-size: 50px;
-  }
-  #head #SCR {
-    display: none;
-  }
-  article {
-    width: 95%;
-  }
-  article p {
-    font-size: 23px;
-    line-height: 34px;
-    margin: 30px 10% 30px 10%;
-  }
-  article h3 {
-    width: 80%;
-    font-size: 38px;
-  }
-  #Art2 h3:first-child {
-    font-size: 40px;
-  }
-  #Art2 img,
-  #Art4 img {
-    width: 90%;
-  }
-  #Art2 .pWrap {
-    align-items: center;
-  }
-  #Art4 #feather {
-    width: 25%;
-    left: 10%;
-    top: -45px;
-  }
-  #Art2 .pop_wrap .pop_inner p {
-    width: 70%;
-    font-size: 20px;
-    margin: 20px 10%;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #head h1 {
-    transform: translateY(-30%);
-    font-size: 35px;
-  }
-  #head h1 span {
-    font-size: 45px;
-  }
-  article {
-    width: 99%;
-  }
-  #Art2 h3:first-child {
-    font-size: 35px;
-  }
-  #Art4 #feather {
-    width: 30%;
-    left: 8%;
-    top: -35px;
-  }
-  #Art5 .CO2num {
-    font-size: 55px;
-  }
-  #Art5 .CO2kg {
-    font-size: 30px;
-  }
-}
-
 #Art7 {
   display: flex;
   align-items: center;
@@ -877,4 +751,120 @@ article p {
 .active .carousel-item__image {
   transition: 0.6s all ease-in-out;
   transform: translateX(0);
+}
+
+@media screen and (max-width: 1600px) {
+  article {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #head #SCR {
+    bottom: 40px;
+  }
+  #head #SCR::before {
+    display: none;
+  }
+  #Art4 #feather {
+    width: 16%;
+    top: -49px;
+  }
+  .FloatBtn1 {
+    position: relative;
+    display: block;
+    transform: translateX(-50%);
+  }
+  #Art2 .pWrap {
+    display: block;
+  }
+  #Art2 .pWrap p {
+    width: 70%;
+    margin: 30px 13% 50px 13%;
+  }
+  #Art2 .pop_wrap .pop_inner {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #head h1 {
+    top: 55%;
+    font-size: 50px;
+    word-break: keep-all;
+  }
+  #head h1 span {
+    font-size: 65px;
+  }
+  #Art2 h3:first-child {
+    font-size: 50px;
+  }
+  #main_footers {
+    flex-direction: column;
+  }
+  #main_footers #circle {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #head h1 {
+    font-size: 35px;
+    word-break: keep-all;
+    transform: translateY(-30%);
+  }
+  #head h1 span {
+    font-size: 45px;
+  }
+  #head #SCR {
+    display: none;
+  }
+  article {
+    width: 99%;
+  }
+  article p {
+    font-size: 23px;
+    line-height: 34px;
+    margin: 30px 10% 30px 10%;
+  }
+  article h3 {
+    width: 80%;
+    font-size: 38px;
+  }
+  #Art2 h3:first-child {
+    font-size: 35px;
+  }
+  #Art2 img,
+  #Art4 img {
+    width: 90%;
+  }
+  #Art2 .pWrap {
+    align-items: center;
+  }
+  #Art4 #feather {
+    width: 30%;
+    left: 8%;
+    top: -35px;
+  }
+  #Art2 .pop_wrap .pop_inner p {
+    width: 70%;
+    font-size: 20px;
+    margin: 20px 10%;
+  }
+  #Art5 .CO2num {
+    font-size: 55px;
+  }
+  #Art5 .CO2kg {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousel-item__info {
+    padding: 0 10px;
+    margin: 10px 20px;
+  }
+  .carousel-item__image {
+    width: 100%;
+  }
 }
