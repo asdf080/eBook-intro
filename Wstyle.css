@@ -243,7 +243,7 @@ article p {
 #Art2 .pop_wrap .pop_inner {
   position: relative;
   width: 50%;
-  min-height: 80%;
+  min-height: 77%;
   display: inline-block;
   padding: 20px 30px;
   background: #f9f9f9;
@@ -312,9 +312,12 @@ article p {
   color: #fff;
   border: none;
   background-color: #8276f4;
+  border-radius: 5px;
 }
 .FloatBtn1:hover {
   cursor: pointer;
+  background-color: #7262fc;
+  transition: 0.1s ease-out;
 }
 .fixed {
   position: absolute;
@@ -547,7 +550,7 @@ article p {
 }
 
 #click {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 20px;
 }
 
@@ -580,6 +583,9 @@ article p {
     width: 70%;
     margin: 30px 13% 50px 13%;
   }
+  #Art2 .pop_wrap .pop_inner {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -596,6 +602,9 @@ article p {
   }
   #main_footers {
     flex-direction: column;
+  }
+  #main_footers #circle {
+    margin-top: 80px;
   }
 }
 
@@ -636,6 +645,11 @@ article p {
     width: 25%;
     left: 10%;
     top: -45px;
+  }
+  #Art2 .pop_wrap .pop_inner p {
+    width: 70%;
+    font-size: 20px;
+    margin: 20px 10%;
   }
 }
 
