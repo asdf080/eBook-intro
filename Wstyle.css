@@ -499,6 +499,7 @@ article p {
   margin-top: 100px;
   padding: 10px 8%;
   color: #fff;
+  cursor: url("./images/cursor2.png"), default;
 }
 
 #main_footers p {
@@ -509,7 +510,7 @@ article p {
 #main_footers p:first-child {
   font-size: 35px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 #main_footers #circle {
@@ -518,6 +519,7 @@ article p {
   border-radius: 50%;
   background-color: #fff;
   margin-top: 20px;
+  cursor: url("./images/cursor.png"), default;
 }
 #main_footers img {
   width: 75%;
@@ -540,7 +542,6 @@ article p {
   flex-direction: column;
   align-items: center;
 }
-
 .goTop:hover {
   cursor: pointer;
 }
