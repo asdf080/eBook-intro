@@ -9,7 +9,7 @@
   padding: 0;
   font-family: "Pretendard-Regular";
   word-break: keep-all;
-  transition: all ease 0.5s;
+  transition: all ease 0.2s;
 }
 body {
   cursor: url("./images/cursor.png"), default;

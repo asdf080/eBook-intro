@@ -51,7 +51,7 @@ function nightDayHandler() {
 // 스크롤 p/깃털
 document.addEventListener("scroll", function () {
   for (let p of document.querySelectorAll("article p")) {
-    if (p.getBoundingClientRect().top - window.innerHeight + 100 <= 0) {
+    if (p.getBoundingClientRect().top - window.innerHeight + 50 <= 0) {
       p.classList.add("Scrovisible");
     } else {
       p.classList.remove("Scrovisible");
