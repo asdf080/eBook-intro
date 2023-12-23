@@ -9,6 +9,7 @@
   padding: 0;
   font-family: "Pretendard-Regular";
   word-break: keep-all;
+  transition: all ease 0.5s;
 }
 body {
   cursor: url("./images/cursor.png"), default;
@@ -546,8 +547,8 @@ article p {
   cursor: pointer;
 }
 .scrolling {
-  transform: translateY(-900vh);
-  transition: 1s;
+  transform: translateY(-250vh);
+  transition: 0.3s;
 }
 
 #click {
@@ -587,7 +588,7 @@ article p {
   -webkit-flex-shrink: 0;
   position: absolute;
   z-index: 0;
-  transition: 0.6s all linear;
+  transition: 0.5s all linear;
 }
 
 .carousel-item__info {
@@ -758,6 +759,11 @@ article p {
   article {
     width: 100%;
   }
+  .FloatBtn1 {
+    position: relative;
+    display: block;
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -770,11 +776,6 @@ article p {
   #Art4 #feather {
     width: 16%;
     top: -49px;
-  }
-  .FloatBtn1 {
-    position: relative;
-    display: block;
-    transform: translateX(-50%);
   }
   #Art2 .pWrap {
     display: block;
@@ -808,11 +809,19 @@ article p {
   }
 }
 
+@media screen and (max-width: 750px) {
+  #Art4 #feather {
+    width: 20%;
+    top: -45px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   #head h1 {
+    padding: 15px;
     font-size: 35px;
     word-break: keep-all;
-    transform: translateY(-30%);
+    transform: translateY(-40%);
   }
   #head h1 span {
     font-size: 45px;
@@ -845,7 +854,7 @@ article p {
   #Art4 #feather {
     width: 30%;
     left: 8%;
-    top: -35px;
+    top: -60px;
   }
   #Art2 .pop_wrap .pop_inner p {
     width: 70%;
@@ -858,14 +867,41 @@ article p {
   #Art5 .CO2kg {
     font-size: 30px;
   }
-}
-
-@media screen and (max-width: 400px) {
+  #Art6 img {
+    width: 100px;
+  }
+  .carousel{
+    min-height: 720px;
+    max-height: 720px;
+  }
+  .carousel-item {
+    flex-direction: column-reverse;
+  }
   .carousel-item__info {
+    height: 50%;
+    width: 90%;
     padding: 0 10px;
-    margin: 10px 20px;
+    margin: 0 20px;
   }
   .carousel-item__image {
     width: 100%;
+    height: 70%;
+  }
+  .carousel-item__description{
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  #Art4 #feather {
+    top: -35px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #Art2 .pop_wrap .pop_inner p{
+    line-height: 28px;
+    width: 85%;
+    margin: 20px 10% 0 5%;
   }
 }

@@ -39,7 +39,7 @@ function nightDayHandler() {
     )) {
       p.style.color = "";
     }
-    for (let p of document.querySelectorAll(".carousel-item, pop_inner")) {
+    for (let p of document.querySelectorAll(".carousel-item, .pop_inner")) {
       p.style.background = "";
     }
     for (let p of document.querySelectorAll(".carousel__icon")) {
@@ -212,26 +212,6 @@ document.querySelector(".goTop").addEventListener("click", function () {
   });
 });
 
-// top 버튼2
-let goTopElement = document.querySelector(".goTop2");
-
-goTopElement.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-  this.classList.remove("ready");
-  this.classList.add("scrolling");
-});
-
-window.addEventListener("scroll", function () {
-  if (window.pageYOffset === 0 && goTopElement) {
-    goTopElement.classList.remove("scrolling");
-    goTopElement.classList.add("ready");
-  }
-});
-
 // 캐러셀
 $(function () {
   $(".carousel-item").eq(0).addClass("active");
@@ -263,5 +243,26 @@ $(function () {
 
     console.log("current " + current);
     console.log("prev " + prev);
+  }
+});
+
+
+// top 버튼2
+let goTopElement = document.querySelector(".goTop2");
+
+goTopElement.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+  this.classList.remove("ready");
+  this.classList.add("scrolling");
+});
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset === 0 && goTopElement) {
+    goTopElement.classList.remove("scrolling");
+    goTopElement.classList.add("ready");
   }
 });
