@@ -41,12 +41,6 @@ body {
   border-radius: 10px;
 }
 
-#main_nav::-webkit-scrollbar-button:vertical:start:decrement {
-  display: block;
-  height: 40px;
-}
-
-
 #main_nav {
   position: fixed;
   top: 0;
