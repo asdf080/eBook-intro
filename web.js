@@ -35,7 +35,7 @@ function nightDayHandler() {
     document.querySelector("#main_nav").style.background = "";
     document.querySelector(".carousel__nav").style.background = "";
     for (let p of document.querySelectorAll(
-      "strong, h3, li, span, a, p, .carousel-item__title, .carousel-item__btn"
+      "strong, h3, li, span, a, p, .carousel-item__title, .carousel-item__btn, .carousel-item__subtitle"
     )) {
       p.style.color = "";
     }
@@ -73,7 +73,6 @@ window.addEventListener("scroll", () => {
   } else {
     FloatBtn.style.animation = "slideDown 0.5s ease forwards";
     FloatBtn.addEventListener("animationend", () => {
-      // 애니메이션이 끝나면 display를 none으로 설정
       if (window.pageYOffset <= 400) {
         FloatBtn.style.display = "none";
       }
@@ -119,7 +118,6 @@ document.querySelector(".pop_wrap").addEventListener("click", function (event) {
 });
 
 // Art3
-// Intersection Observer를 설정합니다.
 let observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -130,33 +128,26 @@ let observer = new IntersectionObserver(
     });
   },
   { threshold: 0.4 }
-); // threshold: 1.0은 요소가 100% 화면에 보여야 콜백이 실행됨을 의미합니다.
+); // threshold: 1.0: 100% 화면에 보여야 콜백이 실행
 
-// #Art3 내의 모든 svg 요소에 대해 observer를 적용합니다.
 document.querySelectorAll("#Art3 svg").forEach((svg) => {
   observer.observe(svg);
 });
 
 // Art5
-function animateNumber(
-  elementId,
-  finalNumber,
-  duration,
-  startNumber,
-  increment
-) {
-  let currentNumber = startNumber;
+function animateNumber(elementId, finalNumber, duration, startNumber, increment) {
+  let curNum = startNumber;
   const element = document.querySelector(elementId);
 
   const interval =
     (duration / Math.abs(finalNumber - startNumber)) * Math.abs(increment);
   const timer = setInterval(() => {
-    currentNumber += increment;
-    element.textContent = currentNumber;
+    curNum += increment;
+    element.textContent = curNum;
 
     if (
-      (increment < 0 && currentNumber <= finalNumber) ||
-      (increment > 0 && currentNumber >= finalNumber)
+      (increment < 0 && curNum <= finalNumber) ||
+      (increment > 0 && curNum >= finalNumber)
     ) {
       clearInterval(timer);
       element.textContent = finalNumber;
@@ -165,7 +156,7 @@ function animateNumber(
 }
 
 let observer2 = new IntersectionObserver(
-  (entries, observer) => {
+  (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         switch (entry.target.id) {
@@ -188,7 +179,7 @@ document.querySelectorAll("#CO2num1, #CO2num2").forEach((el) => {
 
 // Art6
 let observer3 = new IntersectionObserver(
-  (entries, observer) => {
+  (entries) => {
     entries.forEach((entry) => {
       // 만약 요소가 화면에 보인다면 클래스 추가
       if (entry.isIntersecting) {
@@ -197,7 +188,7 @@ let observer3 = new IntersectionObserver(
     });
   },
   { threshold: 0.4 }
-); // threshold: 1.0은 요소가 100% 화면에 보여야 콜백이 실행됨을 의미합니다.
+);
 
 document.querySelectorAll("#Art6 img").forEach((svg) => {
   observer3.observe(svg);
@@ -240,17 +231,14 @@ $(function () {
     $(".carousel-item").eq(prev).removeClass("active");
     $(".carousel-item").eq(slide).addClass("active");
     setTimeout(function () {}, 800);
-
-    console.log("current " + current);
-    console.log("prev " + prev);
   }
 });
 
 
 // top 버튼2
-let goTopElement = document.querySelector(".goTop2");
+let goTop2 = document.querySelector(".goTop2");
 
-goTopElement.addEventListener("click", function () {
+goTop2.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
     left: 0,
@@ -261,8 +249,8 @@ goTopElement.addEventListener("click", function () {
 });
 
 window.addEventListener("scroll", function () {
-  if (window.pageYOffset === 0 && goTopElement) {
-    goTopElement.classList.remove("scrolling");
-    goTopElement.classList.add("ready");
+  if (window.pageYOffset === 0 && goTop2) {
+    goTop2.classList.remove("scrolling");
+    goTop2.classList.add("ready");
   }
 });
