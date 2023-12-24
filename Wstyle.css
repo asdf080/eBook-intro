@@ -32,6 +32,21 @@ body {
   transition: 0.2s;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8276f4;
+  border-radius: 10px;
+}
+
+#main_nav::-webkit-scrollbar-button:vertical:start:decrement {
+  display: block;
+  height: 40px;
+}
+
+
 #main_nav {
   position: fixed;
   top: 0;
