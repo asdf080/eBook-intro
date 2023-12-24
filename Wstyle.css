@@ -146,7 +146,7 @@ input:checked + label .ball {
 }
 #head h1 {
   position: absolute;
-  font-size: 50px;
+  font-size: 70px;
   letter-spacing: 1px;
   top: 50%;
   transform: translateY(-60%);
@@ -159,7 +159,7 @@ input:checked + label .ball {
   background-color: rgba(0, 0, 0, 0.5);
 }
 #head h1 span {
-  font-size: 75px;
+  font-size: 95px;
 }
 #head #SCR {
   position: absolute;
