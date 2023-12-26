@@ -1,3 +1,15 @@
+// 로딩
+window.addEventListener('load', function() {
+  const loaderWrapper = document.getElementById('loader-wrapper');
+
+  document.getElementById('left-panel').style.transform = 'translateX(-100%)';
+  document.getElementById('right-panel').style.transform = 'translateX(100%)';
+
+  setTimeout(() => {
+      loaderWrapper.style.display = 'none';
+  }, 800);
+});
+
 // 야간모드
 let clickNum = 0;
 function nightDayHandler() {
@@ -254,3 +266,35 @@ window.addEventListener("scroll", function () {
     goTop2.classList.add("ready");
   }
 });
+
+// 컨페티
+var defaults = {
+  spread: 360,
+  ticks: 50,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 25,
+  colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8']
+};
+
+function shoot() {
+  confetti({
+    ...defaults,
+    particleCount: 70,
+    scalar: 1.2,
+    shapes: ['star']
+  });
+
+  confetti({
+    ...defaults,
+    particleCount: 10,
+    scalar: 0.75,
+    shapes: ['circle']
+  });
+}
+
+function multiShoot() {
+  setTimeout(shoot, 0);
+  setTimeout(shoot, 100);
+  setTimeout(shoot, 200);
+}
