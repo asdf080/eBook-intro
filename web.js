@@ -280,7 +280,7 @@ var defaults = {
 function shoot() {
   confetti({
     ...defaults,
-    particleCount: 60,
+    particleCount: Math.floor(Math.random() * 31) + 40,
     scalar: 1.2,
     shapes: ['star']
   });
