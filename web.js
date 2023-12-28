@@ -280,7 +280,7 @@ var defaults = {
 function shoot() {
   confetti({
     ...defaults,
-    particleCount: Math.floor(Math.random() * 31) + 40,
+    particleCount: Math.floor(Math.random() * 31) + 50,
     scalar: 1.2,
     shapes: ['star']
   });
@@ -297,4 +297,9 @@ function multiShoot() {
   setTimeout(shoot, 0);
   setTimeout(shoot, 100);
   setTimeout(shoot, 200);
+  setTimeout(shoot, 300);
+  setTimeout(shoot, 400);
+  setTimeout(shoot, 500);
+  setTimeout(shoot, 600);
+  setTimeout(shoot, 700);
 }
