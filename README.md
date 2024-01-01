@@ -22,5 +22,9 @@ https://asdf080.github.io/eBook-intro/
 - Intersection Observer API를 활용한 스크롤 연동 CSS 애니메이션
 
 ### ✔ 미리보기
+pc 라이트 모드
 ![preview](./images/preview1.png)
 ![preview](./images/preview2.png)
+
+mobile 다크 모드
+![preview](./images/preview3.png)
