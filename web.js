@@ -303,3 +303,29 @@ function multiShoot() {
   setTimeout(shoot, 600);
   setTimeout(shoot, 700);
 }
+
+console.log(`
+      ROCKET SCIENCE
+
+            ##
+           #  #
+          #    #
+         #      #
+        #   ##   #
+       #  #    #  #
+       #  #    #   #
+     ##     ##     ##
+    # #            # #
+   #  #            #  #
+  #   #            #   #
+ #    #            #    #
+ #  # #            # #  #
+ # #   #          #   # #
+ #      # # # # ##      #
+
+         #      #
+          #    #
+           #  #
+            ##
+
+`)
