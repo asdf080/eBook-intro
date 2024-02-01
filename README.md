@@ -20,6 +20,7 @@ https://asdf080.github.io/eBook-intro/
 - 다크 모드/라이트 모드 토글 버튼
 - 많은 정보를 한눈에 볼 수 있는 캐러셀 슬라이드
 - Intersection Observer API를 활용한 스크롤 연동 CSS 애니메이션
+- jQuery 라이브러리를 활용한 폭죽 이스터에그
 
 ### ✔ 미리보기
 - pc 라이트 모드
